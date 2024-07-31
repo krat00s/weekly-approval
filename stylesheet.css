@@ -1,0 +1,154 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    /* box-sizing: border-box; */
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.header h1, p{
+    margin: 5px;
+}
+
+.header p{
+    margin-bottom: 25px;
+}
+
+
+.drop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.label{
+    
+    padding-top: 10px;
+    color: grey;
+    font-size: 0.8rem;
+}
+
+.grid-cells {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;    
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #508D4E;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    
+}
+
+#save{
+    background-color: #007BFF;
+}
+
+#save:hover{
+    background-color: #0056b3;
+}
+
+
+button:hover {
+    background-color: #1A5319;
+}
+
+#output {
+    font-size: 18px;
+    margin-top: 15px;
+    text-align: left;
+    max-height: 415px;
+    overflow-y: auto; /* Add vertical scrollbar if content overflows */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    
+    
+    
+}
+
+.output-container{
+    border: 1px solid #999999;
+    border-radius: 5px;
+    width: 100%;
+    margin: 0 0 10px 50px;
+    padding: 15px;
+    position: relative;
+    
+}
+
+#copyClip{
+    
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    background-color: #999999;
+    
+    
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    width: 1000px;
+    height: 481px;
+
+}
+
+#msg {
+
+    padding: 20px 0 0px 0;
+    visibility : 'hidden';
+    transition: opacity 0.5s ease; 
+    opacity: 0; /* Start with the element hidden */
+    color: blue;
+}
+
+.instruction{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 1000px;
+    margin: 0;
+    
+}
+
+#or{
+    color: red;
+}
+
+#to{
+    color: blue;
+}
+
+.instruction ul{
+    margin: 0;
+    padding-left: 20px;
+}

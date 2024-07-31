@@ -4,13 +4,15 @@
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
-  "homepage": "http://krat00s.github.io/weekly-approval"
+  "homepage": "http://krat00s.github.io/weekly-approval",
+  "dependencies": {
+    "gh-pages": "^3.2.3"
+  }
 
 }

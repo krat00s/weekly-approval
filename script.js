@@ -2,14 +2,39 @@ document.addEventListener('DOMContentLoaded', (event) => {
     sessionStorage.clear(); // Clear sessionStorage when page loads
 });
 
+// document.addEventListener('paste', handlePaste);
+
+// function handlePaste(event) {
+//     // Prevent the default paste behavior
+//     event.preventDefault();
+    
+//     const clipboardData = event.clipboardData || window.clipboardData;
+//     const pastedData = clipboardData.getData('Text');
+
+
+//     // Split the pasted data into rows and columns
+//     const dataRows = pastedData.split('\n').map(row => row.split('\t'));
+
+//     // Flatten the array to get a single array of cell values
+//     const flattenedData = dataRows.flat();
+
+
+//     const cells = Array.from({ length: 20 }, (_, i) => `cell${i + 1}`);
+//     for (let i = 0; i < cells.length; i++) {
+//         if (flattenedData[i]) {
+//             document.getElementById(cells[i]).value = flattenedData[i];
+//         }
+//     }
+// }
+
 document.addEventListener('paste', handlePaste);
 
 function handlePaste(event) {
     // Prevent the default paste behavior
     event.preventDefault();
-    
+
     const clipboardData = event.clipboardData || window.clipboardData;
-    const pastedData = clipboardData.getData('Text');
+    let pastedData = clipboardData.getData('Text');
 
     // Split the pasted data into rows and columns
     const dataRows = pastedData.split('\n').map(row => row.split('\t'));
@@ -17,11 +42,20 @@ function handlePaste(event) {
     // Flatten the array to get a single array of cell values
     const flattenedData = dataRows.flat();
 
-
+    console.log('Parsed Rows and Columns:', dataRows);
+    
     const cells = Array.from({ length: 20 }, (_, i) => `cell${i + 1}`);
-    for (let i = 0; i < cells.length; i++) {
-        if (flattenedData[i]) {
-            document.getElementById(cells[i]).value = flattenedData[i];
+    let cellIndex = 0;
+
+    for (let i = 0; i < flattenedData.length; i++) {
+        if (cellIndex < cells.length) {
+            const cell = document.getElementById(cells[cellIndex]);
+            if (cell) {
+                // Remove newlines within each cell's content
+                let value = flattenedData[i].replace(/\r?\n|\r/g, ' ');
+                cell.value = value.trim();
+            }
+            cellIndex++;
         }
     }
 }
@@ -113,3 +147,10 @@ function copyToClipboard() {
     
 }
 
+document.querySelectorAll('.cell').forEach(input => {
+    input.addEventListener('input', function() {
+        // Replace newline characters with a space or remove them
+        this.value = this.value.replace(/\n/g, ' ');
+    
+    });
+});

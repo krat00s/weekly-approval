@@ -3,155 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Compiler</title>
+    <title>Template Generator</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
 <body>
-   <div class="header">
-    <h1>Weekly Report Approval</h1>
-    <p>by Jerry</p>
-   </div>
-    <div class="wrapper">
-        <div class="container">
-       
-            <!-- Rabu, 3 July 2024
-       
-               08:00 - 11:00 IT Support
-               11:00 - 14:00 IT Support
-               14:00 - 17:00 IT Support -->
-           <div class="grid-cells">
-               <!-- Row1 -->
-               <div class="drop">
-                   <input type="text" id="cell1" placeholder="Date">
-                   <label class="label" for="cell1">Date</label>
-   
-               </div>
-               <div class="drop">
-                   <input type="text" id="cell2" placeholder="Activity">
-                   <label class="label" for="cell2">08:00 - 11:00</label>
-               </div>
-               
-               <div class="drop">
-                   <input type="text" id="cell3" placeholder="Activity">
-                   <label class="label" for="cell3">11:00 - 14:00</label>
-               </div>
-       
-               <div class="drop">
-                   <input type="text" id="cell4" placeholder="Activity">
-                   <label class="label" for="cell4">14:00 - 17:00</label>
-               </div>
-               <!-- Row2 -->
-               <div class="drop">
-                   <input type="text" id="cell5" placeholder="Date">
-                   <label class="label" for="cell5">Date</label>
-   
-               </div>
-               <div class="drop">
-                   <input type="text" id="cell6" placeholder="Activity">
-                   <label class="label" for="cell6">08:00 - 11:00</label>
-               </div>
-               
-               <div class="drop">
-                   <input type="text" id="cell7" placeholder="Activity">
-                   <label class="label" for="cell7">11:00 - 14:00</label>
-               </div>
-       
-               <div class="drop">
-                   <input type="text" id="cell8" placeholder="Activity">
-                   <label class="label" for="cell8">14:00 - 17:00</label>
-               </div>
-   
-               <!-- Row 3 -->
-               <div class="drop">
-                   <input type="text" id="cell9" placeholder="Date">
-                   <label class="label" for="cell9">Date</label>
-   
-               </div>
-               <div class="drop">
-                   <input type="text" id="cell10" placeholder="Activity">
-                   <label class="label" for="cell10">08:00 - 11:00</label>
-               </div>
-               
-               <div class="drop">
-                   <input type="text" id="cell11" placeholder="Activity">
-                   <label class="label" for="cell11">11:00 - 14:00</label>
-               </div>
-       
-               <div class="drop">
-                   <input type="text" id="cell12" placeholder="Activity">
-                   <label class="label" for="cell12">14:00 - 17:00</label>
-               </div>
-   
-               <!-- Row 4 -->
-               <div class="drop">
-                   <input type="text" id="cell13" placeholder="Date">
-                   <label class="label" for="cell13">Date</label>
-   
-               </div>
-               <div class="drop">
-                   <input type="text" id="cell14" placeholder="Activity">
-                   <label class="label" for="cell14">08:00 - 11:00</label>
-               </div>
-               
-               <div class="drop">
-                   <input type="text" id="cell15" placeholder="Activity">
-                   <label class="label" for="cell15">11:00 - 14:00</label>
-               </div>
-       
-               <div class="drop">
-                   <input type="text" id="cell16" placeholder="Activity">
-                   <label class="label" for="cell16">14:00 - 17:00</label>
-               </div>
-   
-               <!-- Row 5 -->
-               <div class="drop">
-                   <input type="text" id="cell17" placeholder="Date">
-                   <label class="label" for="cell17">Date</label>
-   
-               </div>
-               <div class="drop">
-                   <input type="text" id="cell18" placeholder="Activity">
-                   <label class="label" for="cell18">08:00 - 11:00</label>
-               </div>
-               
-               <div class="drop">
-                   <input type="text" id="cell19" placeholder="Activity">
-                   <label class="label" for="cell19">11:00 - 14:00</label>
-               </div>
-       
-               <div class="drop">
-                   <input type="text" id="cell20" placeholder="Activity">
-                   <label class="label" for="cell20">14:00 - 17:00</label>
-               </div>
-           </div>
-           <button onclick="saveData()" id="save">Save</button>
-           <button onclick="fetchData()">Print</button>
-   
-       </div>
-       
-       <div class="output-container">
-           <p id="output"></p>
-           <button id="copyClip" onclick="copyToClipboard()"><i class='bx bxs-copy'></i></button>
-       </div>
+    <div class="box">
+
+        <div class="header">
+         <h1>Weekly Report Approval</h1>
+         <p>(it's trash)</p>
+        </div>
+         <div class="wrapper">
+            <label id="dumm" class="label" for="cell1">Paste Here</label>
+             <div class="container">
+            
+                 <!-- Rabu, 3 July 2024
+            
+                    08:00 - 11:00 IT Support
+                    11:00 - 14:00 IT Support
+                    14:00 - 17:00 IT Support -->
+                <div class="grid-cells">
+                    <!-- Row1 -->
+                    <div class="drop">
+                        
+                        <input type="text" class="cell" id="cell1" placeholder="Date">
+                        <label class="label" for="cell1">Date</label>
+                        
+        
+                    </div>
+                    <div class="drop">
+                        <input type="text" class="cell" id="cell2" placeholder="Activity">
+                        <label class="label" for="cell2">08:00 - 11:00</label>
+                    </div>
+                    
+                    <div class="drop">
+                        <input type="text" class="cell" id="cell3" placeholder="Activity">
+                        <label class="label" for="cell3">11:00 - 14:00</label>
+                    </div>
+            
+                    <div class="drop">
+                        <input type="text" class="cell" id="cell4" placeholder="Activity">
+                        <label class="label" for="cell4">14:00 - 17:00</label>
+                    </div>
+                    <!-- Row2 -->
+                    <div class="drop">
+                        <input type="text" class="cell" id="cell5" placeholder="Date">
+                        <label class="label" for="cell5">Date</label>
+        
+                    </div>
+                    <div class="drop">
+                        <input type="text" class="cell" id="cell6" placeholder="Activity">
+                        <label class="label" for="cell6">08:00 - 11:00</label>
+                    </div>
+                    
+                    <div class="drop">
+                        <input type="text" class="cell" id="cell7" placeholder="Activity">
+                        <label class="label" for="cell7">11:00 - 14:00</label>
+                    </div>
+            
+                    <div class="drop">
+                        <input type="text" class="cell" id="cell8" placeholder="Activity">
+                        <label class="label" for="cell8">14:00 - 17:00</label>
+                    </div>
+        
+                    <!-- Row 3 -->
+                    <div class="drop">
+                        <input type="text" class="cell" id="cell9" placeholder="Date">
+                        <label class="label" for="cell9">Date</label>
+        
+                    </div>
+                    <div class="drop">
+                        <input type="text" class="cell" id="cell10" placeholder="Activity">
+                        <label class="label" for="cell10">08:00 - 11:00</label>
+                    </div>
+                    
+                    <div class="drop">
+                        <input type="text" class="cell" id="cell11" placeholder="Activity">
+                        <label class="label" for="cell11">11:00 - 14:00</label>
+                    </div>
+            
+                    <div class="drop">
+                        <input type="text" class="cell" id="cell12" placeholder="Activity">
+                        <label class="label" for="cell12">14:00 - 17:00</label>
+                    </div>
+        
+                    <!-- Row 4 -->
+                    <div class="drop">
+                        <input type="text" class="cell" id="cell13" placeholder="Date">
+                        <label class="label" for="cell13">Date</label>
+        
+                    </div>
+                    <div class="drop">
+                        <input type="text" class="cell" id="cell14" placeholder="Activity">
+                        <label class="label" for="cell14">08:00 - 11:00</label>
+                    </div>
+                    
+                    <div class="drop">
+                        <input type="text" class="cell" id="cell15" placeholder="Activity">
+                        <label class="label" for="cell15">11:00 - 14:00</label>
+                    </div>
+            
+                    <div class="drop">
+                        <input type="text" class="cell" id="cell16" placeholder="Activity">
+                        <label class="label" for="cell16">14:00 - 17:00</label>
+                    </div>
+        
+                    <!-- Row 5 -->
+                    <div class="drop">
+                        <input type="text" class="cell" id="cell17" placeholder="Date">
+                        <label class="label" for="cell17">Date</label>
+        
+                    </div>
+                    <div class="drop">
+                        <input type="text" class="cell" id="cell18" placeholder="Activity">
+                        <label class="label" for="cell18">08:00 - 11:00</label>
+                    </div>
+                    
+                    <div class="drop">
+                        <input type="text" class="cell" id="cell19" placeholder="Activity">
+                        <label class="label" for="cell19">11:00 - 14:00</label>
+                    </div>
+            
+                    <div class="drop">
+                        <input type="text" class="cell" id="cell20" placeholder="Activity">
+                        <label class="label" for="cell20">14:00 - 17:00</label>
+                    </div>
+                </div>
+                <button onclick="saveData()" id="save">Save</button>
+                <button onclick="fetchData()">Print</button>
+        
+            </div>
+            
+            <div class="output-container">
+                <p id="output"></p>
+                <button id="copyClip" onclick="copyToClipboard()"><i class='bx bxs-copy'></i></button>
+                
+            </div>
+         </div>
+     
+         <div id="msg" class="message">
+             Placeholder
+         </div>
+     
+        <div class="instruction">
+         <p><span class="warning-text">MUST READ</span>:</p>
+         <p> <ul>
+
+                <li><p><span class="warning-text">WARNING</span>: Excel cells <span class="warning-text">CANNOT</span> contain line-breaks/enters.</p></li>
+                 <li><p>Reset by starting new session </p></li>
+                 <li><p>⌘ + R <span id="or">or</span> CTRL + R <span id="to">to</span> Start new session</p></li>
+                 <li><p>Instruction: <a href="https://prnt.sc/nVIheP-VgJr3" target="_blank" rel="noopener noreferrer">Click Me</a></p></li>
+                
+              </ul>
+         </p>
+         
+     
+        </div>
+        
     </div>
-
-    <div id="msg" class="message">
-        Placeholder
-    </div>
-
-   <div class="instruction">
-    <p>Note(s):</p>
-    <p> <ul>
-            <li><p>Reset by starting new session </p></li>
-            <li><p>⌘ + R <span id="or">or</span> CTRL + R <span id="to">to</span> Start new session</p></li>
-            <li><p>Instruction: <a href="https://prnt.sc/nVIheP-VgJr3" target="_blank" rel="noopener noreferrer">Click Me</a></p></li>
-         </ul>
-    </p>
-    
-
-   </div>
 
 
 
